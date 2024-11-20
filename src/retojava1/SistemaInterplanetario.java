@@ -1,5 +1,5 @@
 package retojava1;
-
+import java.util.Random;
 import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.Scanner;
@@ -31,6 +31,11 @@ public class SistemaInterplanetario {
                 "Urano: Un gigante de hielo, a una distancia promedio de 2,723 millones de km desde la Tierra.",
                 "Neptuno: El planeta más lejano del Sol, a una distancia promedio de 4,351 millones de km desde la Tierra."));
     ;
+
+    // Eventos aleatorios
+        for (int i = 0; i < 10; i++) {
+            eventoAleatorios(random);
+        }
 
     // Me traigo el escaner creado arriba para no tener que crear otro
     public static int ingresoPasajeros(Scanner scanner) {
@@ -96,8 +101,29 @@ public class SistemaInterplanetario {
         System.out.println("Comida necesaria: " + comida + " raciones");
     }
 
-    public static void eventosAleatorios() {
-
+    public static void eventosAleatorios(Random random) {
+     int evento = random.nextInt(5); 
+        switch(eventoAleatorio){
+            case 0:
+                System.out.println("Alerta....Falla en el sistema!!");
+                
+                break;
+            case 1:
+                 System.out.println("Alerta...Falta de combustible!!");
+                break;
+            case 2:
+                 System.out.println("Alerta...Lluvia de asteroides!!");
+                break;
+            case 3:
+                 System.out.println("Alerta...Desvio a la derecha!!");
+                break;
+            case 4:
+                 System.out.println("Alerta...Desvio a la izquierda!!");
+                break;
+            case 5:
+                 System.out.println("Alerta...Mala comunicacion con la tierra!!");
+                break;
+        }
     }
 
     public static void estadoViaje() {
