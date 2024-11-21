@@ -32,10 +32,8 @@ public class SistemaInterplanetario {
                 "Neptuno: El planeta más lejano del Sol, a una distancia promedio de 4,351 millones de km desde la Tierra."));
     ;
 
-    // Eventos aleatorios
-        for (int i = 0; i < 10; i++) {
-            eventoAleatorios(random);
-        }
+    
+        
 
     // Me traigo el escaner creado arriba para no tener que crear otro
     public static int ingresoPasajeros(Scanner scanner) {
@@ -100,10 +98,10 @@ public class SistemaInterplanetario {
         System.out.println("Gasolina necesaria: " + gasolina + " litros");
         System.out.println("Comida necesaria: " + comida + " raciones");
     }
-
+    // se usa la clase Random para elegir entre varias opciones aleatorias 
     public static void eventosAleatorios(Random random) {
      int evento = random.nextInt(5); 
-        switch(eventoAleatorio){
+        switch(evento){
             case 0:
                 System.out.println("Alerta....Falla en el sistema!!");
                 
@@ -153,5 +151,6 @@ public class SistemaInterplanetario {
 
         System.out.println("\n Viaje completado. FELICIDADES!!");
     }
-}
+  }
+
 
