@@ -149,7 +149,7 @@ public class SistemaInterplanetario {
             progreso++;
         }
 
-        System.out.println("\n Viaje completado. FELICIDADES!!");
+    
     }
   }
 
