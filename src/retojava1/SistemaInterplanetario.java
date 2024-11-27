@@ -8,14 +8,19 @@ import java.util.Scanner;
 
 public class SistemaInterplanetario {
     static Scanner scanner = new Scanner(System.in);
+
     static ArrayList<String> planetas = new ArrayList<>(Arrays.asList(
             "Mercurio", "Venus", "Marte", "Júpiter", "Saturno", "Urano", "Neptuno")); 
     static ArrayList<Integer> distancias = new ArrayList<>(Arrays.asList(
             77, 41, 78, 628, 1275, 2723, 4351)); // Distancias sin la Tierra
     static String[] naves = { "Exploradora", "Carga pesada", "Velocidad maxima" };
+
     static double[] velocidades = { 20000.0, 15000.0, 30000.0 };
+
     static int naveSeleccionada = -1; // Aseguramos que inicialmente no hay nave seleccionada.
+    
     static int pasajeros;
+
     static double gasolina, comida;
 
     
@@ -38,7 +43,7 @@ public class SistemaInterplanetario {
                 }
                 System.out.println("Por favor, ingrese un número entre " + min + " y " + max + ".");
             } catch (NumberFormatException e) {
-                System.out.println("Entrada inválida. Por favor, ingrese un número.");
+                System.err.println("Entrada inválida. Por favor, ingrese un número.");
             }
         }
     }
@@ -91,7 +96,7 @@ public class SistemaInterplanetario {
         System.out.println("¿Deseas ajustar los recursos? (si/no)");
         String respuesta = scanner.nextLine();
     
-        if (respuesta.equalsIgnoreCase("sí")) {
+        if (respuesta.equalsIgnoreCase("si")) {
             System.out.println("Ingrese la cantidad de combustible (litros) para el viaje:");
             gasolina = obtenerEntradaValida((int) gasolinaCalculada, 10000); // Ajuste de gasolina
             System.out.println("Ingrese la cantidad de comida (raciones) para el viaje:");
@@ -109,7 +114,7 @@ public class SistemaInterplanetario {
 
     public static void iniciarSimulacion() {
         if (naveSeleccionada == -1) {
-            System.out.println("Error: Debes seleccionar una nave antes de iniciar la simulación.");
+            System.err.println("Error: Debes seleccionar una nave antes de iniciar la simulación.");
             return;
         }
     
