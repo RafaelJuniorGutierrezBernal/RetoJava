@@ -8,6 +8,9 @@ import java.util.Scanner;
 
 public class SistemaInterplanetario {
     static Scanner scanner = new Scanner(System.in);
+    
+    // INTENGRANTES DEL GRUPO
+    // JAIR SINISTERRA CARABALI Y RAFAEL JUNIOR GUTIERREZ BERNAL
 
     static ArrayList<String> planetas = new ArrayList<>(Arrays.asList(
             "Mercurio", "Venus", "Marte", "Júpiter", "Saturno", "Urano", "Neptuno")); 
